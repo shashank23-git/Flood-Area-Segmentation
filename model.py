@@ -3,12 +3,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-model = load_model(
-    r'C:\Users\SHASHANK\Downloads\Detection model\flood_segmentation_unet.h5',
-    compile=False
-)
+model = load_model('flood_segmentation_unet.h5', compile=False)
 # Read image
-img = cv2.imread(r"C:\Users\SHASHANK\Downloads\Detection model\test.png")
+img = cv2.imread('test.png')
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 # Resize to model input size
